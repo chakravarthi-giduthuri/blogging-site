@@ -1,0 +1,16 @@
+{% extends 'main/base.html'%}
+
+{%block content %}
+   {% if query %}
+			{% if results %}
+			   <ul>
+				 {% for item in results %}
+					    <li><h2>{{ item|escape }}</h2></li>
+				 {% endfor %}
+			   </ul>
+			{% else %}
+			   <p>NO RESULTS FOUND.</p>
+					       
+			{% endif %}
+    {% endif %} 
+{% endblock content%}
